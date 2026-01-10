@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ye Zhang - Reading Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- 基本描述 & SEO -->
+  <meta name="description" content="Reading notes by Ye Zhang on computational pathology, nuclei segmentation, multi-omics integration, and multimodal foundation models." />
+
+  <!-- Open Graph / 分享卡片 -->
+  <meta property="og:title" content="Ye Zhang - Reading Notes" />
+  <meta property="og:description" content="Daily reading log and paper notes on computational pathology, nuclei segmentation, multi-omics integration, and multimodal models." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://zhangye-zoe.github.io/" />
+  <!-- 建议放一张 1200x630 左右的横版预览图 -->
+  <meta property="og:image" content="https://zhangye-zoe.github.io/images/share-default.png" />
+
+  <!-- Twitter Card / X 预览 -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ye Zhang - Reading Notes" />
+  <meta name="twitter:description" content="Daily reading notes on computational pathology and multi-omics integration." />
+  <meta name="twitter:image" content="https://zhangye-zoe.github.io/images/share-default.png" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/icons/ye.png" />
+</head>
+<body>
+  <div class="app">
+    <!-- Left sidebar: navigation -->
+    <aside class="sidebar" aria-label="Main navigation">
+      <div class="sidebar-header">
+        <!-- 这里可以换成你生成的 icon png -->
+        <div class="sidebar-logo" aria-hidden="true">YE</div>
+        <div>
+          <div class="sidebar-title">Ye's Reading Notes</div>
+          <div class="sidebar-subtitle">
+            A little better every day.
+          </div>
+
+          <!-- 研究方向 tag -->
+          <div class="sidebar-tags">
+            <span class="sidebar-tag">Multi-omics</span>
+            <span class="sidebar-tag">Computational Pathology</span>
+            <!-- <span class="sidebar-tag">Nuclei Segmentation</span> -->
+          </div>
+
+          <!-- 多语言愿望 -->
+          <div class="sidebar-motto">
+            <div>愿这个世界不再有癌症。</div>
+            <div>May there be a world without cancer.</div>
+            <div>باشد که جهانی بدون سرطان وجود داشته باشد.  <!-- 波斯语 --></div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <!-- All notes: daily log -->
+        <details class="nav-group" open>
+          <summary data-category="all" class="nav-summary">
+            All Notes (Daily Log)
+          </summary>
+          <ul class="nav-list">
+            <li><a href="#today">Today</a></li>
+            <li><a href="#recent">Recent days</a></li>
+          </ul>
+        </details>
+
+        <!-- 1. Multi-omics -->
+        <details class="nav-group" open>
+          <summary data-category="multi-omics" class="nav-summary">
+            Multi-omics
+          </summary>
+          <ul class="nav-list">
+            <li><a href="post-multiomics-integration.html">Multi-omics Integration</a></li>
+            <li><a href="post-perturbation-example.html">Perturbation Analysis</a></li>
+          </ul>
+        </details>
+
+        <!-- 2. Pathology -->
+        <details class="nav-group" open>
+          <summary data-category="pathology" class="nav-summary">
+            Pathology
+          </summary>
+          <ul class="nav-list">
+            <li><a href="post-nuclei-example.html">Nuclei Segmentation</a></li>
+            <li><a href="post-cancer-diagnosis.html">Cancer Diagnosis</a></li>
+            <li><a href="post-cancer-prognosis.html">Cancer Prognosis</a></li>
+          </ul>
+        </details>
+
+        <!-- 3. Multimodal & Foundation Models -->
+        <details class="nav-group" open>
+          <summary data-category="multimodal" class="nav-summary">
+            Multimodal Models
+          </summary>
+          <ul class="nav-list">
+            <li><a href="post-foundation-example.html">Foundation Models</a></li>
+            <li><a href="post-multimodal-repr.html">Multimodal Representation Learning</a></li>
+          </ul>
+        </details>
+      </nav>
+
+      <div class="sidebar-footer">
+        © 2026 Ye Zhang<br />
+        Built with ♥ and GitHub Pages
+      </div>
+    </aside>
+
+    <!-- Right side: main content -->
+    <main class="main">
+      <!-- 统一的页面抬头区域 -->
+      <header class="main-header">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html" class="crumb-home">Home</a>
+          <span class="crumb-separator">/</span>
+          <span id="crumb-category">All Notes</span>
+        </nav>        
+
+        <h1 class="main-title" id="main-title">All Notes · Daily Log</h1>
+        <p class="main-description" id="main-description">
+          A lightweight daily log of what I read, think, and try.
+        </p>
+
+        <!-- 简单的研究标签，突出你的方向 -->
+        <div class="main-research-tags">
+          <span class="tag">Nuclei Instance Segmentation</span>
+          <span class="tag">Spatial &amp; Multi-omics Integration</span>
+          <span class="tag">Multimodal &amp; Foundation Models</span>
+        </div>
+
+        <!-- 分享区域（icon + JS） -->
+        <div class="share-bar">
+          <span class="share-label">Share:</span>
+
+          <!-- X (Twitter) -->
+          <a id="share-x" class="share-btn share-btn-icon" href="#" target="_blank" rel="noopener noreferrer">
+            <img src="images/icons/x.png" alt="Share on X" class="share-icon" />
+          </a>
+
+          <!-- LinkedIn -->
+          <a id="share-linkedin" class="share-btn share-btn-icon" href="#" target="_blank" rel="noopener noreferrer">
+            <img src="images/icons/linkedin.png" alt="Share on LinkedIn" class="share-icon" />
+          </a>
+
+          <!-- Zhihu：复制链接为主 -->
+          <button class="share-btn share-btn-icon" data-platform="Zhihu" type="button">
+            <img src="images/icons/zhihu.png" alt="Share to Zhihu" class="share-icon" />
+          </button>
+
+          <!-- RedNote / 小红书：复制链接 -->
+          <button class="share-btn share-btn-icon" data-platform="RedNote" type="button">
+            <img src="images/icons/rednote.png" alt="Share to RedNote" class="share-icon" />
+          </button>
+
+          <!-- WeChat：复制链接 -->
+          <button class="share-btn share-btn-icon" data-platform="WeChat" type="button">
+            <img src="images/icons/wechat.png" alt="Share to WeChat" class="share-icon" />
+          </button>
+        </div>
+
+        <div id="share-toast" class="share-toast" aria-live="polite"></div>
+
+        <!-- 页面浏览次数 -->
+        <div class="page-views">
+          <span class="page-views-label">Page views:</span>
+          <span id="busuanzi_value_page_pv">--</span>
+        </div>
+      </header>
+
+      <div id="post-lists">
+        <!-- All Notes / Daily log -->
+        <section class="post-list-section" data-category="all" aria-labelledby="today">
+          <h2 class="section-title" id="today">Today</h2>
+
+          <article class="post-card">
+            <h3 class="post-card-title">
+              2026-01-09 · Bridging histology and multi-omics
+            </h3>
+            <p class="post-card-meta">
+              Tags: Multi-omics Integration, Foundation Models
+              <span class="meta-separator">·</span>
+              <span class="post-card-venue" data-venue="NeurIPS" data-year="2024">
+                NeurIPS 2024
+              </span>
+            </p>
+            <p class="post-card-excerpt">
+              Skimmed a paper on aligning histology with bulk RNA-seq using a joint latent space. Noted their loss design and how they handle confounders.
+              Wrote down a potential idea for integrating perturbation data into a similar framework.
+            </p>
+          </article>
+
+          <h2 class="section-title" id="recent">Recent days</h2>
+
+          <article class="post-card">
+            <h3 class="post-card-title">
+              2026-01-08 · Thoughts on perturbation screens
+            </h3>
+            <p class="post-card-meta">
+              Tags: Perturbation Analysis
+              <span class="meta-separator">·</span>
+              <span class="post-card-venue" data-venue="Nature Methods" data-year="2022">
+                Nature Methods 2022
+              </span>
+            </p>
+            <p class="post-card-excerpt">
+              Read a large-scale CRISPR perturbation study. Recorded how they model gene-gene interactions and how that might be combined with spatial information.
+            </p>
+          </article>
+
+          <article class="post-card">
+            <h3 class="post-card-title">
+              2026-01-07 · Revisiting nuclei segmentation benchmarks
+            </h3>
+            <p class="post-card-meta">
+              Tags: Nuclei Segmentation, Pathology
+              <span class="meta-separator">·</span>
+              <span class="post-card-venue" data-venue="MICCAI" data-year="2021">
+                MICCAI 2021
+              </span>
+            </p>
+            <p class="post-card-excerpt">
+              Compared several nuclei instance segmentation architectures. Reflected on continual learning and how to design an interactive annotation loop.
+            </p>
+          </article>
+        </section>
+
+        <!-- 1. Multi-omics -->
+        <section class="post-list-section" data-category="multi-omics" aria-label="Multi-omics notes">
+          <h2 class="section-title">Multi-omics</h2>
+
+          <article class="post-card">
+            <a href="post-multiomics-integration.html" class="post-card-title">
+              [Paper Note] Multi-omics Integration
+            </a>
+            <p class="post-card-meta">
+              Category: Multi-omics · Subtopic: Integration
+              <span class="meta-separator">·</span>
+              <span class="post-card-venue" data-venue="ICML" data-year="2023">
+                ICML 2023
+              </span>
+            </p>
+            <p class="post-card-excerpt">
+              A brief summary of the problem setting, integration strategy, and how this work connects to computational pathology and cancer subtyping...
+            </p>
+          </article>
+
+          <article class="post-card">
+            <a href="post-perturbation-example.html" class="post-card-title">
+              [Paper Note] Perturbation Analysis
+            </a>
+            <p class="post-card-meta">
+              Category: Multi-omics · Subtopic: Perturbation-based integration
+              <span class="meta-separator">·</span>
+              <span class="post-card-venue" data-venue="Cell" data-year="2021">
+                Cell 2021
+              </span>
+            </p>
+            <p class="post-card-excerpt">
+              Notes on a study using large-scale perturbation screens to infer gene regulatory programs and cellular responses, and how these signals can be aligned with other omics layers...
+            </p>
+          </article>
+        </section>
+
+        <!-- 2. Pathology -->
+        <section class="post-list-section" data-category="pathology" aria-label="Pathology notes">
+          <h2 class="section-title">Pathology</h2>
+
+          <article class="post-card">
+            <a href="post-nuclei-example.html" class="post-card-title">
+              [Paper Note] Nuclei Segmentation
+            </a>
+            <p class="post-card-meta">
+              Category: Pathology · Subtopic: Nuclei Segmentation
+              <span class="meta-separator">·</span>
+              <span class="post-card-venue" data-venue="CVPR" data-year="2020">
+                CVPR 2020
+              </span>
+            </p>
+            <p class="post-card-excerpt">
+              A reflection on different architectures for nuclei instance segmentation, how they handle overlapping/touching nuclei, and some ideas about continual learning and prompts...
+            </p>
+          </article>
+
+          <article class="post-card">
+            <a href="post-cancer-diagnosis.html" class="post-card-title">
+              [Paper Note] Cancer Diagnosis
+            </a>
+            <p class="post-card-meta">
+              Category: Pathology · Subtopic: Diagnosis
+              <span class="meta-separator">·</span>
+              <span class="post-card-venue" data-venue="Nature Medicine" data-year="2019">
+                Nature Medicine 2019
+              </span>
+            </p>
+            <p class="post-card-excerpt">
+              Notes on models and biomarkers used for cancer diagnosis from histopathology, with comments on robustness, domain shift, and interpretability...
+            </p>
+          </article>
+
+          <article class="post-card">
+            <a href="post-cancer-prognosis.html" class="post-card-title">
+              [Paper Note] Cancer Prognosis
+            </a>
+            <p class="post-card-meta">
+              Category: Pathology · Subtopic: Prognosis / Risk Stratification
+              <span class="meta-separator">·</span>
+              <span class="post-card-venue" data-venue="Nature Cancer" data-year="2022">
+                Nature Cancer 2022
+              </span>
+            </p>
+            <p class="post-card-excerpt">
+              Summary of survival models, risk scores, and how omics + image features are combined to predict outcomes...
+            </p>
+          </article>
+        </section>
+
+        <!-- 3. Multimodal & Foundation Models -->
+        <section class="post-list-section" data-category="multimodal" aria-label="Multimodal and foundation model notes">
+          <h2 class="section-title">Multimodal &amp; Foundation Models</h2>
+
+          <article class="post-card">
+            <a href="post-foundation-example.html" class="post-card-title">
+              [Paper Note] Foundation Models in Pathology
+            </a>
+            <p class="post-card-meta">
+              Category: Multimodal · Subtopic: Foundation Models
+              <span class="meta-separator">·</span>
+              <span class="post-card-venue" data-venue="NeurIPS" data-year="2023">
+                NeurIPS 2023
+              </span>
+            </p>
+            <p class="post-card-excerpt">
+              A note on a foundation model for histopathology images: pretraining strategy, downstream tasks, scaling behavior, and open questions for multi-omics and spatial data...
+            </p>
+          </article>
+
+          <article class="post-card">
+            <a href="post-multimodal-repr.html" class="post-card-title">
+              [Paper Note] Multimodal Representation Learning
+            </a>
+            <p class="post-card-meta">
+              Category: Multimodal · Subtopic: Cross-modal representations
+              <span class="meta-separator">·</span>
+              <span class="post-card-venue" data-venue="ICLR" data-year="2022">
+                ICLR 2022
+              </span>
+            </p>
+            <p class="post-card-excerpt">
+              Thoughts on models that jointly learn from images, text, and omics, and how such representations can support reasoning and downstream tasks...
+            </p>
+          </article>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- Busuanzi 页面访问量统计 -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  <!-- 主 JS 文件 -->
+  <script src="main.js"></script>
+</body>
+</html>

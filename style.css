@@ -982,3 +982,17 @@
       grid-template-columns: 1fr;
     }
   }
+
+  .hero-text a {
+    color: #5b5ce6;
+    font-weight: 600;
+    text-decoration: none;
+    background: linear-gradient(180deg, transparent 72%, rgba(99, 102, 241, 0.12) 72%);
+    transition: color 0.18s ease, background 0.18s ease;
+  }
+  
+  .hero-text a:hover {
+    color: #2563eb;
+    background: linear-gradient(180deg, transparent 72%, rgba(59, 130, 246, 0.16) 72%);
+  }
+

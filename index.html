@@ -48,7 +48,7 @@
             <summary class="nav-group-title">Computational Biology</summary>
             <div class="nav-links">
               <a href="#" class="nav-link" data-page="multiomics-overview">Overview</a>
-              <a href="#" class="nav-link" data-page="multiomics-survey">Survey Paper</a>
+              <a href="#" class="nav-link" data-page="multiomics-survey">Survey Papers</a>
               <a href="#" class="nav-link" data-page="multiomics-integration">Multi-omics Integration</a>
               <a href="#" class="nav-link" data-page="multiomics-trajectory">Trajectory Inference</a>
               <a href="#" class="nav-link" data-page="multiomics-perturbation">Perturbation Prediction</a>
@@ -75,482 +75,633 @@
 
     <main class="content-area">
       <div class="content-inner">
+
         <section class="page is-active" id="page-home">
-          <header class="hero-card hero-home">
-            <div class="hero-orb hero-orb-1"></div>
-            <div class="hero-orb hero-orb-2"></div>
+          <div class="page-stack">
+            <header class="hero-card hero-home">
+              <div class="hero-orb hero-orb-1"></div>
+              <div class="hero-orb hero-orb-2"></div>
 
-            <div class="hero-topline">Research Notebook</div>
-            <h2 class="hero-title">Introduction</h2>
-            <p class="hero-text">
-              This website curates representative papers in computational pathology, computational biology, and related areas, together with concise personal reading notes. Suggestions for relevant papers are welcome via <a href="https://github.com/zhangye-zoe/MultiOmics-Literature" target="_blank" rel="noopener noreferrer">GitHub</a>, and further comments may be sent to <a href="mailto:zhangye_zoe@163.com">zhangye_zoe@163.com</a>.
-            </p>
+              <div class="hero-topline">Research Notebook</div>
+              <h2 class="hero-title">Introduction</h2>
+              <p class="hero-text">
+                This website curates representative papers in computational pathology, computational biology, and related areas, together with concise personal reading notes. Suggestions for relevant papers are welcome via
+                <a href="https://github.com/zhangye-zoe/MultiOmics-Literature" target="_blank" rel="noopener noreferrer">GitHub</a>,
+                and further comments may be sent to
+                <a href="mailto:zhangye_zoe@163.com">zhangye_zoe@163.com</a>.
+              </p>
 
-            <div class="hero-tags">
-              <span class="hero-tag hero-tag-bio">Computational Biology</span>
-              <span class="hero-tag hero-tag-path">Computational Pathology</span>
-              <span class="hero-tag hero-tag-cancer">Cancer Research</span>
-            </div>
-          </header>
-
-          <section class="panel-card panel-card-home">
-            <div class="section-head">
-              <div>
-                <div class="section-kicker kicker-home">Recent</div>
-                <h3 class="section-title">Recent Notes</h3>
-                <p class="section-subtitle">A compact view of your latest reading records.</p>
+              <div class="hero-tags">
+                <span class="hero-tag hero-tag-bio">Computational Biology</span>
+                <span class="hero-tag hero-tag-path">Computational Pathology</span>
+                <span class="hero-tag hero-tag-cancer">Cancer Research</span>
               </div>
-            </div>
 
-            <div class="note-list">
-              <article class="note-card note-card-home">
-                <div class="note-main">
-                  <div class="note-date">2026-01-09</div>
-                  <h4 class="note-title">Bridging histology and multi-omics</h4>
-                  <div class="note-meta">NeurIPS 2024 · Multi-omics Integration · Foundation-style alignment</div>
-                  <p class="note-excerpt">
-                    A note on aligning histology with transcriptomic signals in a shared latent space, focusing on confounder control and future extensions toward perturbation-aware integration.
-                  </p>
+              <div class="home-quick-grid">
+                <div class="home-quick-card">
+                  <div class="home-quick-kicker">Focus</div>
+                  <div class="home-quick-title">Computational Biology</div>
+                  <div class="home-quick-desc">Multi-omics integration, temporal dynamics, perturbation modeling, and representation learning.</div>
                 </div>
-                <a class="note-open-btn note-open-btn-home" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
-              </article>
+                <div class="home-quick-card">
+                  <div class="home-quick-kicker">Focus</div>
+                  <div class="home-quick-title">Computational Pathology</div>
+                  <div class="home-quick-desc">Segmentation, diagnosis, prognosis, multimodal fusion, and clinically grounded pathology AI.</div>
+                </div>
+                <div class="home-quick-card">
+                  <div class="home-quick-kicker">Style</div>
+                  <div class="home-quick-title">Concise Notes</div>
+                  <div class="home-quick-desc">Each entry emphasizes problem setup, method intuition, biological value, and limitations.</div>
+                </div>
+              </div>
+            </header>
 
-              <article class="note-card note-card-home">
-                <div class="note-main">
-                  <div class="note-date">2026-01-08</div>
-                  <h4 class="note-title">Thoughts on perturbation screens</h4>
-                  <div class="note-meta">Nature Methods 2022 · Perturbation Analysis</div>
-                  <p class="note-excerpt">
-                    Reflections on large-scale perturbation design, regulatory inference, and how perturbation signals may later connect to spatial and histology-derived representations.
-                  </p>
+            <section class="panel-card panel-card-home">
+              <div class="section-head">
+                <div>
+                  <div class="section-kicker kicker-home">Recent</div>
+                  <h3 class="section-title">Recent Notes</h3>
+                  <p class="section-subtitle">A compact view of the latest reading records and ideas currently under active tracking.</p>
                 </div>
-                <a class="note-open-btn note-open-btn-home" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
-              </article>
+              </div>
 
-              <article class="note-card note-card-home">
-                <div class="note-main">
-                  <div class="note-date">2026-01-07</div>
-                  <h4 class="note-title">Revisiting nuclei segmentation benchmarks</h4>
-                  <div class="note-meta">MICCAI 2021 · Pathology · Nuclei Segmentation</div>
-                  <p class="note-excerpt">
-                    A compact comparison of instance segmentation strategies, annotation assumptions, and what benchmark design misses when moving toward real pathology workflows.
-                  </p>
-                </div>
-                <a class="note-open-btn note-open-btn-home" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
-              </article>
-            </div>
-          </section>
+              <div class="note-list note-list-loose">
+                <article class="note-card note-card-home">
+                  <div class="note-main">
+                    <div class="note-date">2026-01-09</div>
+                    <h4 class="note-title">Bridging Histology and Multi-omics</h4>
+                    <div class="note-meta">NeurIPS 2024 · Multi-omics Integration · Foundation-style alignment</div>
+                    <p class="note-excerpt">A note on aligning histology with transcriptomic signals in a shared latent space, focusing on confounder control and future extensions toward perturbation-aware integration.</p>
+                  </div>
+                  <a class="note-open-btn note-open-btn-home" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
+                </article>
+
+                <article class="note-card note-card-home">
+                  <div class="note-main">
+                    <div class="note-date">2026-01-08</div>
+                    <h4 class="note-title">Thoughts on Perturbation Screens</h4>
+                    <div class="note-meta">Nature Methods 2022 · Perturbation Analysis</div>
+                    <p class="note-excerpt">Reflections on large-scale perturbation design, regulatory inference, and how perturbation signals may later connect to spatial and histology-derived representations.</p>
+                  </div>
+                  <a class="note-open-btn note-open-btn-home" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
+                </article>
+
+                <article class="note-card note-card-home">
+                  <div class="note-main">
+                    <div class="note-date">2026-01-07</div>
+                    <h4 class="note-title">Revisiting Nuclei Segmentation Benchmarks</h4>
+                    <div class="note-meta">MICCAI 2021 · Pathology · Nuclei Segmentation</div>
+                    <p class="note-excerpt">A compact comparison of instance segmentation strategies, annotation assumptions, and what benchmark design misses when moving toward real pathology workflows.</p>
+                  </div>
+                  <a class="note-open-btn note-open-btn-home" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
+                </article>
+              </div>
+            </section>
+          </div>
         </section>
 
         <section class="page" id="page-multiomics-overview">
-          <section class="panel-card category-page category-page-bio">
-            <div class="section-head">
-              <div>
-                <div class="section-kicker kicker-bio">Category</div>
-                <h3 class="section-title">Catalogue</h3>
-                <p class="section-subtitle">Multi-omics, perturbation modeling, temporal dynamics, and biologically grounded machine learning.</p>
+          <div class="page-stack">
+            <section class="overview-card">
+              <div class="overview-topline">Overview</div>
+              <h2 class="overview-title">Computational Biology</h2>
+              <p class="overview-text">This section tracks papers in multi-omics integration, trajectory modeling, perturbation prediction, and biologically grounded machine learning. The goal is not only to collect influential papers, but also to organize them by research role: surveys for orientation, integration methods for representation learning, trajectory models for dynamics, and perturbation studies for causal understanding.</p>
+
+              <div class="overview-meta">
+                <span class="overview-pill">Multi-omics</span>
+                <span class="overview-pill">Temporal Dynamics</span>
+                <span class="overview-pill">Perturbation Modeling</span>
+                <span class="overview-pill">Biological ML</span>
               </div>
-            </div>
 
-            <!-- <div class="category-intro category-intro-bio">
-              I use this section to track papers in computational biology, including multi-omics analysis, perturbation modeling, temporal dynamics, regulatory inference, and theoretically grounded formulations for complex biological systems.
-            </div> -->
+              <div class="section-directory">
+                <a href="#" class="directory-card nav-link" data-page="multiomics-survey">
+                  <div class="directory-label">Section 01</div>
+                  <div class="directory-title">Survey Papers</div>
+                  <div class="directory-desc">Entry points for understanding problem settings, datasets, taxonomies, and methodological trends.</div>
+                </a>
+                <a href="#" class="directory-card nav-link" data-page="multiomics-integration">
+                  <div class="directory-label">Section 02</div>
+                  <div class="directory-title">Multi-omics Integration</div>
+                  <div class="directory-desc">Methods for alignment, joint embedding, disentanglement, imputation, and cross-modal reasoning.</div>
+                </a>
+                <a href="#" class="directory-card nav-link" data-page="multiomics-trajectory">
+                  <div class="directory-label">Section 03</div>
+                  <div class="directory-title">Trajectory Inference</div>
+                  <div class="directory-desc">Papers focused on cellular dynamics, lineage transitions, temporal structure, and kinetic modeling.</div>
+                </a>
+                <a href="#" class="directory-card nav-link" data-page="multiomics-perturbation">
+                  <div class="directory-label">Section 04</div>
+                  <div class="directory-title">Perturbation Prediction</div>
+                  <div class="directory-desc">Interventional learning, response prediction, regulatory programs, and causal biological signals.</div>
+                </a>
+              </div>
 
-            <div class="note-list">
-              <article class="note-card compact note-card-bio">
-                <div class="note-main">
-                  <div class="note-badges">
-                    <span class="note-badge badge-topic">Overview</span>
-                    <span class="note-badge badge-method">Joint Embedding</span>
-                  </div>
-                  <h4 class="note-title">[Paper Note] Multi-omics Integration</h4>
-                  <div class="note-meta">ICML 2023 · Alignment · Latent representation</div>
-                  <p class="note-excerpt">A short note on integration assumptions, supervision signal, latent structure, and downstream biological validity.</p>
+              <div class="section-mini-note">This overview functions as a directory for the entire Computational Biology section, helping readers understand the structure before opening individual notes.</div>
+            </section>
+
+            <section class="panel-card category-page category-page-bio">
+              <div class="section-head">
+                <div>
+                  <div class="section-kicker kicker-bio">Category</div>
+                  <h3 class="section-title">At a Glance</h3>
+                  <p class="section-subtitle">A compact preview of the themes currently covered in this section.</p>
                 </div>
-                <a class="note-open-btn note-open-btn-bio" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
-              </article>
+              </div>
 
-              <article class="note-card compact note-card-bio">
-                <div class="note-main">
-                  <div class="note-badges">
-                    <span class="note-badge badge-topic">Overview</span>
-                    <span class="note-badge badge-green">Perturbation</span>
+              <p class="category-caption">At this stage, the content is centered on computational biology. The current structure is intentionally broad enough to support future additions such as single-cell foundation models, spatial omics, and multimodal disease modeling without requiring a redesign of the page hierarchy.</p>
+
+              <div class="panel-divider"></div>
+
+              <div class="note-list note-list-loose">
+                <article class="note-card compact note-card-bio">
+                  <div class="note-main">
+                    <div class="note-badges">
+                      <span class="note-badge badge-topic">Overview</span>
+                      <span class="note-badge badge-method">Joint Embedding</span>
+                    </div>
+                    <h4 class="note-title">[Paper Note] Multi-omics Integration</h4>
+                    <div class="note-meta">ICML 2023 · Alignment · Latent Representation</div>
+                    <p class="note-excerpt">A short note on integration assumptions, supervision signal, latent structure, and downstream biological validity.</p>
                   </div>
-                  <h4 class="note-title">[Paper Note] Perturbation Analysis</h4>
-                  <div class="note-meta">Cell 2021 · Perturbation · Regulatory programs</div>
-                  <p class="note-excerpt">A note on how perturbation experiments uncover causal biological structure and where model assumptions become fragile.</p>
-                </div>
-                <a class="note-open-btn note-open-btn-bio" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
-              </article>
-            </div>
-          </section>
+                  <a class="note-open-btn note-open-btn-bio" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
+                </article>
+
+                <article class="note-card compact note-card-bio">
+                  <div class="note-main">
+                    <div class="note-badges">
+                      <span class="note-badge badge-topic">Overview</span>
+                      <span class="note-badge badge-green">Perturbation</span>
+                    </div>
+                    <h4 class="note-title">[Paper Note] Perturbation Analysis</h4>
+                    <div class="note-meta">Cell 2021 · Perturbation · Regulatory Programs</div>
+                    <p class="note-excerpt">A note on how perturbation experiments uncover causal biological structure and where model assumptions become fragile.</p>
+                  </div>
+                  <a class="note-open-btn note-open-btn-bio" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
+                </article>
+              </div>
+            </section>
+          </div>
         </section>
-
 
         <section class="page" id="page-multiomics-survey">
-          <section class="panel-card category-page category-page-survey">
-            <div class="section-head">
-              <div>
-                <div class="section-kicker kicker-integration">Subtopic</div>
-                <h3 class="section-title">Survey Paper</h3>
-                <p class="section-subtitle">Survey papers related to multi-omics research.</p>
+          <div class="page-stack">
+            <section class="overview-card">
+              <div class="overview-topline">In This Section</div>
+              <h2 class="overview-title">Survey Papers</h2>
+              <p class="overview-text">This section collects survey and review papers that provide a broader map of the field. It is useful for clarifying terminology, identifying major benchmarks, and understanding how different methodological families are positioned in multi-omics research.</p>
+
+              <div class="section-directory section-directory-compact">
+                <div class="directory-card static-card">
+                  <div class="directory-label">Focus</div>
+                  <div class="directory-title">Field Orientation</div>
+                  <div class="directory-desc">Taxonomies, problem definitions, and major research threads across multi-omics studies.</div>
+                </div>
+                <div class="directory-card static-card">
+                  <div class="directory-label">Use Case</div>
+                  <div class="directory-title">Reading Entry Point</div>
+                  <div class="directory-desc">A strong starting point before diving into individual method papers.</div>
+                </div>
+                <div class="directory-card static-card">
+                  <div class="directory-label">What I Track</div>
+                  <div class="directory-title">Methods + Scope</div>
+                  <div class="directory-desc">Whether a survey only summarizes prior work or also offers a useful conceptual framework.</div>
+                </div>
               </div>
-            </div>
+            </section>
 
-            <div class="note-list">
-              <article class="note-card compact note-card-integration">
-                <div class="note-main">
-                  <div class="note-badges">
-                    <span class="note-badge badge-venue">Nucleic Acids Research 2025</span>
-                    <span class="note-badge badge-topic">Integration and Alignment</span>
-                    <span class="note-badge badge-method">Spatial Transcriptomic</span>
-                  </div>
-                  <h4 class="note-title note-title-strong">A Comprehensive Review of Spatial Transcriptomics Data Alignment and Integration</h4>
-                  <!-- <div class="note-meta">Spatial transcriptomic · Alignment and Integration</div> -->
-                  <p class="note-excerpt">This study aims to present a comprehensive review of methodologies for spatial transcriptomics data alignment and integration, explain the problem, its scope and challenges, and propose a general pipeline..</p>
+            <section class="panel-card category-page category-page-survey">
+              <div class="section-head section-head-simple">
+                <div>
+                  <div class="section-kicker kicker-integration">Subtopic</div>
+                  <h3 class="section-title">Paper List</h3>
                 </div>
-                <a class="note-open-btn note-open-btn-integration" href="notes/Survey/a_comp.html" target="_blank" rel="noopener noreferrer">Browse</a>
-              </article>
+              </div>
 
-              <article class="note-card compact note-card-integration">
-                <div class="note-main">
-                  <div class="note-badges">
-                    <span class="note-badge badge-venue">Briefings in Bioinformatics 2025</span>
-                    <span class="note-badge badge-topic">Data Integration</span>
-                    <span class="note-badge badge-method">Generative Model</span>
+              <div class="note-list note-list-loose">
+                <article class="note-card compact note-card-integration">
+                  <div class="note-main">
+                    <div class="note-badges">
+                      <span class="note-badge badge-venue">Nucleic Acids Research 2025</span>
+                      <span class="note-badge badge-topic">Integration and Alignment</span>
+                      <span class="note-badge badge-method">Spatial Transcriptomics</span>
+                    </div>
+                    <h4 class="note-title note-title-strong">A Comprehensive Review of Spatial Transcriptomics Data Alignment and Integration</h4>
+                    <p class="note-excerpt">This study presents a comprehensive review of methodologies for spatial transcriptomics data alignment and integration, discusses the problem scope and key challenges, and outlines a general analysis pipeline.</p>
                   </div>
-                  <h4 class="note-title note-title-strong">A Technical Review of Multi-omics Data Integration Methods: from Classical Statistical to Deep Generative Approaches</h4>
-                  <!-- <div class="note-meta">Integration · Joint latent space · Cross-modal alignment</div> -->
-                  <p class="note-excerpt">The study comprehensively review state-ofthe-art multi-omics integration methods with a focus on deep generative models, particularly variational autoencoders that have been widely used for data imputation, augmentation, and batch effect correction.</p>
-                </div>
-                <a class="note-open-btn note-open-btn-integration" href="notes/Survey/a_tech.html" target="_blank" rel="noopener noreferrer">Browse</a>
-              </article>
+                  <a class="note-open-btn note-open-btn-integration" href="notes/Survey/a_comp.html" target="_blank" rel="noopener noreferrer">Browse</a>
+                </article>
 
-              <article class="note-card compact note-card-integration">
-                <div class="note-main">
-                  <div class="note-badges">
-                    <span class="note-badge badge-venue">Frontiers of Bioinformatics 2023</span>
-                    <span class="note-badge badge-topic">Data Integration</span>
-                    <span class="note-badge badge-method">Single-cell Data</span>
+                <article class="note-card compact note-card-integration">
+                  <div class="note-main">
+                    <div class="note-badges">
+                      <span class="note-badge badge-venue">Briefings in Bioinformatics 2025</span>
+                      <span class="note-badge badge-topic">Data Integration</span>
+                      <span class="note-badge badge-method">Generative Model</span>
+                    </div>
+                    <h4 class="note-title note-title-strong">A Technical Review of Multi-omics Data Integration Methods: from Classical Statistical to Deep Generative Approaches</h4>
+                    <p class="note-excerpt">This review summarizes state-of-the-art multi-omics integration methods with a focus on deep generative models, especially variational autoencoders for imputation, augmentation, and batch effect correction.</p>
                   </div>
-                  <h4 class="note-title note-title-strong">Omics Data Integration in Computational Biology Viewed Through the Prism of Machine Learning Paradigms</h4>
-                  <!-- <div class="note-meta">Integration · Joint latent space · Cross-modal alignment</div> -->
-                  <p class="note-excerpt">This review introduces the most common data types encountered in computational biology and provides systematic definitions of the data integration problems.</p>
-                </div>
-                <a class="note-open-btn note-open-btn-integration" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
-              </article>
-            </div>
-          </section>
+                  <a class="note-open-btn note-open-btn-integration" href="notes/Survey/a_tech.html" target="_blank" rel="noopener noreferrer">Browse</a>
+                </article>
+
+                <article class="note-card compact note-card-integration">
+                  <div class="note-main">
+                    <div class="note-badges">
+                      <span class="note-badge badge-venue">Frontiers of Bioinformatics 2023</span>
+                      <span class="note-badge badge-topic">Data Integration</span>
+                      <span class="note-badge badge-method">Single-cell Data</span>
+                    </div>
+                    <h4 class="note-title note-title-strong">Omics Data Integration in Computational Biology Viewed Through the Prism of Machine Learning Paradigms</h4>
+                    <p class="note-excerpt">This review introduces commonly used omics data types in computational biology and provides systematic definitions of major data integration problems.</p>
+                  </div>
+                  <a class="note-open-btn note-open-btn-integration" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
+                </article>
+              </div>
+            </section>
+          </div>
         </section>
 
-
         <section class="page" id="page-multiomics-integration">
-          <section class="panel-card category-page category-page-integration">
-            <div class="section-head">
-              <div>
-                <div class="section-kicker kicker-integration">Subtopic</div>
-                <h3 class="section-title">Multi-omics Integration</h3>
-                <p class="section-subtitle">Methods for integration, alignment, disentanglement, and cross-modal biological reasoning.</p>
+          <div class="page-stack">
+            <section class="overview-card">
+              <div class="overview-topline">In This Section</div>
+              <h2 class="overview-title">Multi-omics Integration</h2>
+              <p class="overview-text">This section focuses on methods for aligning or jointly modeling multiple omics modalities. The main emphasis is on how papers handle paired versus unpaired settings, what assumptions they make about shared information, and whether their learned representations support biologically meaningful downstream tasks.</p>
+
+              <div class="section-directory section-directory-compact">
+                <div class="directory-card static-card">
+                  <div class="directory-label">Question</div>
+                  <div class="directory-title">What Is Shared?</div>
+                  <div class="directory-desc">Whether the method explicitly separates shared biological signal from modality-specific variation.</div>
+                </div>
+                <div class="directory-card static-card">
+                  <div class="directory-label">Question</div>
+                  <div class="directory-title">How Is Matching Done?</div>
+                  <div class="directory-desc">Anchors, latent alignment, contrastive learning, optimal transport, or probabilistic modeling.</div>
+                </div>
+                <div class="directory-card static-card">
+                  <div class="directory-label">Question</div>
+                  <div class="directory-title">What Is Evaluated?</div>
+                  <div class="directory-desc">Alignment quality, cross-modal prediction, batch robustness, and biological conservation.</div>
+                </div>
               </div>
-            </div>
+            </section>
 
-            <div class="note-list">
-              <article class="note-card compact note-card-integration">
-                <div class="note-main">
-                  <div class="note-badges">
-                    <span class="note-badge badge-venue">PNAS 2026</span>
-                    <span class="note-badge badge-topic">Single-cell Integration</span>
-                    <span class="note-badge badge-method">Statistical Learning</span>
-                  </div>
-                  <h4 class="note-title note-title-strong">Bridging Unpaired Single-cell Multimodal Data for Integrative Analyses with SuperMap</h4>
-                  <!-- <div class="note-meta">Integration · Joint latent space · Cross-modal alignment</div> -->
-                  <p class="note-excerpt">The paper proposes a statistical framework for multi-omics alignment. Specifically, the ATAC modality is used to infer the unobserved RNA modality, while enforcing a distributional constraint to ensure that the inferred RNA follows a similar distribution as the observed RNA.</p>
+            <section class="panel-card category-page category-page-integration">
+              <div class="section-head section-head-simple">
+                <div>
+                  <div class="section-kicker kicker-integration">Subtopic</div>
+                  <h3 class="section-title">Paper List</h3>
                 </div>
-                <a class="note-open-btn note-open-btn-integration" href="notes/CBio/SuperMap.html" target="_blank" rel="noopener noreferrer">Browse</a>
-              </article>
-            <!-- </div>
+              </div>
 
-            <div class="note-list"> -->
-              <article class="note-card compact note-card-integration">
-                <div class="note-main">
-                  <div class="note-badges">
-                    <span class="note-badge badge-venue">NeurIPS 2025</span>
-                    <span class="note-badge badge-topic">Single-cell Integration</span>
-                    <span class="note-badge badge-method">VAE</span>
+              <div class="note-list note-list-loose">
+                <article class="note-card compact note-card-integration">
+                  <div class="note-main">
+                    <div class="note-badges">
+                      <span class="note-badge badge-venue">PNAS 2026</span>
+                      <span class="note-badge badge-topic">Single-cell Integration</span>
+                      <span class="note-badge badge-method">Statistical Learning</span>
+                    </div>
+                    <h4 class="note-title note-title-strong">Bridging Unpaired Single-cell Multimodal Data for Integrative Analyses with SuperMap</h4>
+                    <p class="note-excerpt">The paper proposes a statistical framework for multi-omics alignment. Specifically, the ATAC modality is used to infer the unobserved RNA modality, while a distributional constraint encourages the inferred RNA to follow a distribution similar to the observed RNA.</p>
                   </div>
-                  <h4 class="note-title note-title-strong">scMRDR: A Scalable and Flexible Framework for Unpaired Single-Cell Multi-Omics Data Integration</h4>
-                  <!-- <div class="note-meta">Integration · Joint latent space · Cross-modal alignment</div> -->
-                  <p class="note-excerpt">The paper proposes a β-VAE–based disentanglement framework that decomposes cellular representations into modality-shared and modality-specific latent components, and evaluates the proposed method on biological conservation, batch correction, and modality integration tasks.</p>
-                </div>
-                <a class="note-open-btn note-open-btn-integration" href="notes/CBio/scMRDR.html" target="_blank" rel="noopener noreferrer">Browse</a>
-              </article>
-            <!-- </div>
+                  <a class="note-open-btn note-open-btn-integration" href="notes/CBio/SuperMap.html" target="_blank" rel="noopener noreferrer">Browse</a>
+                </article>
 
-            <div class="note-list"> -->
-              <!-- <article class="note-card compact note-card-integration">
-                <div class="note-main">
-                  <div class="note-badges">
-                    <span class="note-badge badge-venue">PNAS 2026</span>
-                    <span class="note-badge badge-topic">Single-cell Integration</span>
-                    <span class="note-badge badge-method">Statistical Learning</span>
+                <article class="note-card compact note-card-integration">
+                  <div class="note-main">
+                    <div class="note-badges">
+                      <span class="note-badge badge-venue">NeurIPS 2025</span>
+                      <span class="note-badge badge-topic">Single-cell Integration</span>
+                      <span class="note-badge badge-method">VAE</span>
+                    </div>
+                    <h4 class="note-title note-title-strong">scMRDR: A Scalable and Flexible Framework for Unpaired Single-Cell Multi-Omics Data Integration</h4>
+                    <p class="note-excerpt">The paper proposes a β-VAE-based disentanglement framework that decomposes cellular representations into modality-shared and modality-specific latent components, and evaluates the method on biological conservation, batch correction, and modality integration tasks.</p>
                   </div>
-                  <h4 class="note-title note-title-strong">Bridging Unpaired Single-cell Multimodal Data for Integrative Analyses with SuperMap</h4>
-                  <div class="note-meta">Integration · Joint latent space · Cross-modal alignment</div> -->
-                  <!-- <p class="note-excerpt">The paper proposes a statistical framework for multi-omics alignment. Specifically, the ATAC modality is used to infer the unobserved RNA modality, while enforcing a distributional constraint to ensure that the inferred RNA follows a similar distribution as the observed RNA.</p>
-                </div>
-                <a class="note-open-btn note-open-btn-integration" href="notes/CBio/SuperMap.html" target="_blank" rel="noopener noreferrer">Browse</a>
-              </article> -->
-            </div>
-          </section>
+                  <a class="note-open-btn note-open-btn-integration" href="notes/CBio/scMRDR.html" target="_blank" rel="noopener noreferrer">Browse</a>
+                </article>
+              </div>
+            </section>
+          </div>
         </section>
 
         <section class="page" id="page-multiomics-trajectory">
-          <section class="panel-card category-page category-page-trajectory">
-            <div class="section-head">
-              <div>
-                <div class="section-kicker kicker-trajectory">Subtopic</div>
-                <h3 class="section-title">Trajectory Inference</h3>
-                <p class="section-subtitle">
-                  Modeling cellular dynamics, temporal state transitions, and regulatory changes from multi-omic single-cell data.
-                </p>
+          <div class="page-stack">
+            <section class="overview-card">
+              <div class="overview-topline">In This Section</div>
+              <h2 class="overview-title">Trajectory Inference</h2>
+              <p class="overview-text">This section follows papers that model cellular dynamics from single-cell and multi-omic data. The key interest is not only whether a method reconstructs trajectories, but also whether it provides interpretable temporal structure, lineage-specific behavior, or mechanistic insight into regulatory changes.</p>
+
+              <div class="section-directory section-directory-compact">
+                <div class="directory-card static-card">
+                  <div class="directory-label">Focus</div>
+                  <div class="directory-title">Temporal Structure</div>
+                  <div class="directory-desc">Pseudotime, latent time, trajectory consistency, and lineage-aware progression.</div>
+                </div>
+                <div class="directory-card static-card">
+                  <div class="directory-label">Focus</div>
+                  <div class="directory-title">Regulatory Kinetics</div>
+                  <div class="directory-desc">How the method links chromatin, transcription, or multimodal state transitions over time.</div>
+                </div>
+                <div class="directory-card static-card">
+                  <div class="directory-label">Focus</div>
+                  <div class="directory-title">Interpretability</div>
+                  <div class="directory-desc">Whether the model explains dynamic programs rather than only producing embeddings.</div>
+                </div>
               </div>
-            </div>
+            </section>
 
-            <div class="note-list">
-              <article class="note-card compact note-card-featured">
-                <div class="note-main">
-                  <div class="note-badges">
-                    <span class="note-badge badge-venue">Nature Communications 2025</span>
-                    <span class="note-badge badge-topic">Trajectory Inference</span>
-                    <span class="note-badge badge-method">MultiVeloVAE</span>
-                  </div>
-                  <h4 class="note-title note-title-strong">
-                    Inferring Differential Dynamics from Multilineage, Multi-omic, and Multi-sample Single-cell Data with MultiVeloVAE
-                  </h4>
-                  <p class="note-excerpt">
-                    A Framework for Modeling lineage-specific and sample-dependent cellular dynamics from multi-omic single-cell data,
-                    with emphasis on latent temporal structure, differential kinetics, and regulatory state transitions.
-                  </p>
+            <section class="panel-card category-page category-page-trajectory">
+              <div class="section-head section-head-simple">
+                <div>
+                  <div class="section-kicker kicker-trajectory">Subtopic</div>
+                  <h3 class="section-title">Paper List</h3>
                 </div>
-                <a class="note-open-btn note-open-btn-trajectory" href="notes/CBio/MultiVeloVAE.html" target="_blank" rel="noopener noreferrer">
-                  Browse
-                </a>
-              </article>
+              </div>
 
-
-              <article class="note-card compact note-card-featured">
-                <div class="note-main">
-                  <div class="note-badges">
-                    <span class="note-badge badge-venue">Nature Methods 2025</span>
-                    <span class="note-badge badge-topic">Trajectory Inference</span>
-                    <span class="note-badge badge-method">STORIES</span>
+              <div class="note-list note-list-loose">
+                <article class="note-card compact note-card-featured">
+                  <div class="note-main">
+                    <div class="note-badges">
+                      <span class="note-badge badge-venue">Nature Communications 2025</span>
+                      <span class="note-badge badge-topic">Trajectory Inference</span>
+                      <span class="note-badge badge-method">MultiVeloVAE</span>
+                    </div>
+                    <h4 class="note-title note-title-strong">Inferring Differential Dynamics from Multilineage, Multi-omic, and Multi-sample Single-cell Data with MultiVeloVAE</h4>
+                    <p class="note-excerpt">A framework for modeling lineage-specific and sample-dependent cellular dynamics from multi-omic single-cell data, with emphasis on latent temporal structure, differential kinetics, and regulatory state transitions.</p>
                   </div>
-                  <h4 class="note-title note-title-strong">
-                    STORIES: Learning Cell Fate Landscapes from Spatial Transcriptomics Using Optimal Transport
-                  </h4>
-                  <p class="note-excerpt">
-                    A framework for modeling lineage-specific and sample-dependent cellular dynamics from multi-omic single-cell data,
-                    with emphasis on latent temporal structure, differential kinetics, and regulatory state transitions.
-                  </p>
-                </div>
-                <a class="note-open-btn note-open-btn-trajectory" href="note-template.html" target="_blank" rel="noopener noreferrer">
-                  Browse
-                </a>
-              </article>
+                  <a class="note-open-btn note-open-btn-trajectory" href="notes/CBio/MultiVeloVAE.html" target="_blank" rel="noopener noreferrer">Browse</a>
+                </article>
 
-
-              <article class="note-card compact note-card-featured">
-                <div class="note-main">
-                  <div class="note-badges">
-                    <span class="note-badge badge-venue">Nature Communications 2025</span>
-                    <span class="note-badge badge-topic">Trajectory Inference</span>
-                    <span class="note-badge badge-method">GraphVelo</span>
+                <article class="note-card compact note-card-featured">
+                  <div class="note-main">
+                    <div class="note-badges">
+                      <span class="note-badge badge-venue">Nature Methods 2025</span>
+                      <span class="note-badge badge-topic">Trajectory Inference</span>
+                      <span class="note-badge badge-method">STORIES</span>
+                    </div>
+                    <h4 class="note-title note-title-strong">STORIES: Learning Cell Fate Landscapes from Spatial Transcriptomics Using Optimal Transport</h4>
+                    <p class="note-excerpt">A trajectory-oriented framework for modeling spatially informed cell fate landscapes, with emphasis on transition geometry, developmental paths, and biologically meaningful transport structure.</p>
                   </div>
-                  <h4 class="note-title note-title-strong">
-                    GraphVelo Allows for Accurate Inference of Multimodal Velocities and Molecular Mechanisms for Single Cells
-                  </h4>
-                  <p class="note-excerpt">
-                    A framework for modeling lineage-specific and sample-dependent cellular dynamics from multi-omic single-cell data,
-                    with emphasis on latent temporal structure, differential kinetics, and regulatory state transitions.
-                  </p>
-                </div>
+                  <a class="note-open-btn note-open-btn-trajectory" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
+                </article>
 
-                <a class="note-open-btn note-open-btn-trajectory" href="note-template.html" target="_blank" rel="noopener noreferrer">
-                  Browse
-                </a>
-              </article>
-
-            </div>
-          </section>
+                <article class="note-card compact note-card-featured">
+                  <div class="note-main">
+                    <div class="note-badges">
+                      <span class="note-badge badge-venue">Nature Communications 2025</span>
+                      <span class="note-badge badge-topic">Trajectory Inference</span>
+                      <span class="note-badge badge-method">GraphVelo</span>
+                    </div>
+                    <h4 class="note-title note-title-strong">GraphVelo Allows for Accurate Inference of Multimodal Velocities and Molecular Mechanisms for Single Cells</h4>
+                    <p class="note-excerpt">A graph-based framework for inferring multimodal cellular velocities and associated molecular mechanisms, with emphasis on dynamic transitions and cross-modal biological interpretation.</p>
+                  </div>
+                  <a class="note-open-btn note-open-btn-trajectory" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
+                </article>
+              </div>
+            </section>
+          </div>
         </section>
 
         <section class="page" id="page-multiomics-perturbation">
-          <section class="panel-card category-page category-page-perturbation">
-            <div class="section-head">
-              <div>
-                <div class="section-kicker kicker-perturbation">Subtopic</div>
-                <h3 class="section-title">Computational Biology · Perturbation Prediction</h3>
-                <p class="section-subtitle">Interventional biology, cellular response, and regulation-aware learning.</p>
-              </div>
-            </div>
+          <div class="page-stack">
+            <section class="overview-card">
+              <div class="overview-topline">In This Section</div>
+              <h2 class="overview-title">Perturbation Prediction</h2>
+              <p class="overview-text">This section collects papers that model cellular responses under interventions such as gene perturbation, drug treatment, or experimental manipulation. The main interest is whether models can move beyond static association and recover response structure that is useful for biological reasoning.</p>
 
-            <div class="note-list">
-              <article class="note-card compact note-card-perturbation">
-                <div class="note-main">
-                  <div class="note-badges">
-                    <span class="note-badge badge-venue">Cell 2021</span>
-                    <span class="note-badge badge-green">Perturbation</span>
-                    <span class="note-badge badge-method">Regulatory Programs</span>
-                  </div>
-                  <h4 class="note-title note-title-strong">[Paper Note] Perturbation Analysis</h4>
-                  <div class="note-meta">Cellular response · Intervention · Regulatory inference</div>
-                  <p class="note-excerpt">A note on how perturbation screens expose dynamic regulation and what kinds of downstream tasks are genuinely non-trivial.</p>
+              <div class="section-directory section-directory-compact">
+                <div class="directory-card static-card">
+                  <div class="directory-label">Focus</div>
+                  <div class="directory-title">Intervention</div>
+                  <div class="directory-desc">How the perturbation is represented and whether the experimental design is biologically realistic.</div>
                 </div>
-                <a class="note-open-btn note-open-btn-perturbation" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
-              </article>
-            </div>
-          </section>
+                <div class="directory-card static-card">
+                  <div class="directory-label">Focus</div>
+                  <div class="directory-title">Prediction Target</div>
+                  <div class="directory-desc">Gene expression, cell state shifts, regulatory programs, or multimodal downstream effects.</div>
+                </div>
+                <div class="directory-card static-card">
+                  <div class="directory-label">Focus</div>
+                  <div class="directory-title">Biological Value</div>
+                  <div class="directory-desc">Whether the model reveals interpretable intervention effects rather than just benchmark gains.</div>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel-card category-page category-page-perturbation">
+              <div class="section-head section-head-simple">
+                <div>
+                  <div class="section-kicker kicker-perturbation">Subtopic</div>
+                  <h3 class="section-title">Paper List</h3>
+                </div>
+              </div>
+
+              <div class="note-list">
+                <article class="note-card compact note-card-perturbation">
+                  <div class="note-main">
+                    <div class="note-badges">
+                      <span class="note-badge badge-venue">Cell 2021</span>
+                      <span class="note-badge badge-green">Perturbation</span>
+                      <span class="note-badge badge-method">Regulatory Programs</span>
+                    </div>
+                    <h4 class="note-title note-title-strong">[Paper Note] Perturbation Analysis</h4>
+                    <div class="note-meta">Cellular Response · Intervention · Regulatory Inference</div>
+                    <p class="note-excerpt">A note on how perturbation screens expose dynamic regulation and what kinds of downstream tasks are genuinely non-trivial.</p>
+                  </div>
+                  <a class="note-open-btn note-open-btn-perturbation" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
+                </article>
+              </div>
+            </section>
+          </div>
         </section>
 
         <section class="page" id="page-pathology-overview">
-          <section class="panel-card category-page category-page-pathology">
-            <div class="section-head">
-              <div>
-                <div class="section-kicker kicker-pathology">Category</div>
-                <h3 class="section-title">Computational Pathology</h3>
-                <p class="section-subtitle">Segmentation, diagnosis, prognosis, and clinically grounded pathology AI.</p>
+          <div class="page-stack">
+            <section class="overview-card overview-card-pathology">
+              <div class="overview-topline">Overview</div>
+              <h2 class="overview-title">Computational Pathology</h2>
+              <p class="overview-text">This section is designed for pathology papers that matter beyond benchmark scores, including nuclei segmentation, diagnosis, prognosis, multimodal fusion, data curation, and clinically grounded evaluation. It is lighter than the computational biology section for now, but the structure is already prepared for future expansion.</p>
+
+              <div class="section-directory">
+                <a href="#" class="directory-card nav-link" data-page="pathology-nuclei">
+                  <div class="directory-label">Section 01</div>
+                  <div class="directory-title">Nuclei Segmentation</div>
+                  <div class="directory-desc">Instance segmentation, overlap handling, annotation quality, and promptable segmentation designs.</div>
+                </a>
+                <a href="#" class="directory-card nav-link" data-page="pathology-diagnosis">
+                  <div class="directory-label">Section 02</div>
+                  <div class="directory-title">Cancer Diagnosis</div>
+                  <div class="directory-desc">Diagnostic pipelines, domain shift, biomarkers, and clinically meaningful pathology AI.</div>
+                </a>
+                <a href="#" class="directory-card nav-link" data-page="pathology-prognosis">
+                  <div class="directory-label">Section 03</div>
+                  <div class="directory-title">Cancer Prognosis</div>
+                  <div class="directory-desc">Risk modeling, multimodal fusion, survival prediction, and translational relevance.</div>
+                </a>
               </div>
-            </div>
+            </section>
 
-            <div class="category-intro category-intro-pathology">
-              This section focuses on pathology papers that are useful beyond leaderboard numbers: segmentation, weak supervision, diagnosis, survival modeling, interpretability, data curation, and clinical robustness.
-            </div>
-
-            <div class="note-list">
-              <article class="note-card compact note-card-pathology">
-                <div class="note-main">
-                  <div class="note-badges">
-                    <span class="note-badge badge-venue">CVPR 2020</span>
-                    <span class="note-badge badge-path">Segmentation</span>
-                  </div>
-                  <h4 class="note-title">[Paper Note] Nuclei Segmentation</h4>
-                  <div class="note-meta">Instance separation · Annotation burden · Foundation models</div>
-                  <p class="note-excerpt">A note on instance separation, annotation burden, and which ideas remain relevant for pathology foundation models.</p>
+            <section class="panel-card category-page category-page-pathology">
+              <div class="section-head">
+                <div>
+                  <div class="section-kicker kicker-pathology">Category</div>
+                  <h3 class="section-title">At a Glance</h3>
+                  <p class="section-subtitle">Segmentation, diagnosis, prognosis, and clinically grounded pathology AI.</p>
                 </div>
-                <a class="note-open-btn note-open-btn-pathology" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
-              </article>
+              </div>
 
-              <article class="note-card compact note-card-pathology">
-                <div class="note-main">
-                  <div class="note-badges">
-                    <span class="note-badge badge-venue">Nature Medicine 2019</span>
-                    <span class="note-badge badge-path">Diagnosis</span>
-                  </div>
-                  <h4 class="note-title">[Paper Note] Cancer Diagnosis</h4>
-                  <div class="note-meta">Biomarkers · Domain generalization · Clinical plausibility</div>
-                  <p class="note-excerpt">Notes on biomarker usage, pathology pipelines, domain generalization, and clinical plausibility.</p>
-                </div>
-                <a class="note-open-btn note-open-btn-pathology" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
-              </article>
+              <div class="category-intro category-intro-pathology">This section focuses on pathology papers that are useful beyond leaderboard numbers: segmentation, weak supervision, diagnosis, survival modeling, interpretability, data curation, and clinical robustness.</div>
 
-              <article class="note-card compact note-card-pathology">
-                <div class="note-main">
-                  <div class="note-badges">
-                    <span class="note-badge badge-venue">Nature Cancer 2022</span>
-                    <span class="note-badge badge-path">Prognosis</span>
+              <div class="note-list note-list-loose">
+                <article class="note-card compact note-card-pathology">
+                  <div class="note-main">
+                    <div class="note-badges">
+                      <span class="note-badge badge-venue">CVPR 2020</span>
+                      <span class="note-badge badge-path">Segmentation</span>
+                    </div>
+                    <h4 class="note-title">[Paper Note] Nuclei Segmentation</h4>
+                    <div class="note-meta">Instance Separation · Annotation Burden · Foundation Models</div>
+                    <p class="note-excerpt">A note on instance separation, annotation burden, and which ideas remain relevant for pathology foundation models.</p>
                   </div>
-                  <h4 class="note-title">[Paper Note] Cancer Prognosis</h4>
-                  <div class="note-meta">Survival objectives · Patient stratification · Multimodal fusion</div>
-                  <p class="note-excerpt">A concise note on survival objectives, multimodal fusion, patient stratification, and evaluation design.</p>
-                </div>
-                <a class="note-open-btn note-open-btn-pathology" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
-              </article>
-            </div>
-          </section>
+                  <a class="note-open-btn note-open-btn-pathology" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
+                </article>
+
+                <article class="note-card compact note-card-pathology">
+                  <div class="note-main">
+                    <div class="note-badges">
+                      <span class="note-badge badge-venue">Nature Medicine 2019</span>
+                      <span class="note-badge badge-path">Diagnosis</span>
+                    </div>
+                    <h4 class="note-title">[Paper Note] Cancer Diagnosis</h4>
+                    <div class="note-meta">Biomarkers · Domain Generalization · Clinical Plausibility</div>
+                    <p class="note-excerpt">Notes on biomarker usage, pathology pipelines, domain generalization, and clinical plausibility.</p>
+                  </div>
+                  <a class="note-open-btn note-open-btn-pathology" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
+                </article>
+
+                <article class="note-card compact note-card-pathology">
+                  <div class="note-main">
+                    <div class="note-badges">
+                      <span class="note-badge badge-venue">Nature Cancer 2022</span>
+                      <span class="note-badge badge-path">Prognosis</span>
+                    </div>
+                    <h4 class="note-title">[Paper Note] Cancer Prognosis</h4>
+                    <div class="note-meta">Survival Objectives · Patient Stratification · Multimodal Fusion</div>
+                    <p class="note-excerpt">A concise note on survival objectives, multimodal fusion, patient stratification, and evaluation design.</p>
+                  </div>
+                  <a class="note-open-btn note-open-btn-pathology" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
+                </article>
+              </div>
+            </section>
+          </div>
         </section>
 
         <section class="page" id="page-pathology-nuclei">
-          <section class="panel-card category-page category-page-nuclei">
-            <div class="section-head">
-              <div>
-                <div class="section-kicker kicker-nuclei">Subtopic</div>
-                <h3 class="section-title">Computational Pathology · Nuclei Segmentation</h3>
-                <p class="section-subtitle">Instance segmentation, overlap resolution, annotation strategy, and promptable designs.</p>
-              </div>
-            </div>
+          <div class="page-stack">
+            <section class="overview-card overview-card-pathology-sub">
+              <div class="overview-topline">In This Section</div>
+              <h2 class="overview-title">Nuclei Segmentation</h2>
+              <p class="overview-text">This section focuses on nuclei segmentation papers with attention to annotation strategy, instance separation, robustness to overlap, and whether the method design can scale to realistic pathology workflows.</p>
+            </section>
 
-            <div class="note-list">
-              <article class="note-card compact note-card-nuclei">
-                <div class="note-main">
-                  <div class="note-badges">
-                    <span class="note-badge badge-venue">CVPR 2020</span>
-                    <span class="note-badge badge-path">Pathology</span>
-                    <span class="note-badge badge-method">Segmentation</span>
-                  </div>
-                  <h4 class="note-title note-title-strong">[Paper Note] Nuclei Segmentation</h4>
-                  <div class="note-meta">Architecture · Supervision quality · Deployment realism</div>
-                  <p class="note-excerpt">A structured reading note on nuclei segmentation architecture, supervision quality, and deployment realism.</p>
+            <section class="panel-card category-page category-page-nuclei">
+              <div class="section-head section-head-simple">
+                <div>
+                  <div class="section-kicker kicker-nuclei">Subtopic</div>
+                  <h3 class="section-title">Paper List</h3>
                 </div>
-                <a class="note-open-btn note-open-btn-nuclei" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
-              </article>
-            </div>
-          </section>
+              </div>
+
+              <div class="note-list">
+                <article class="note-card compact note-card-nuclei">
+                  <div class="note-main">
+                    <div class="note-badges">
+                      <span class="note-badge badge-venue">CVPR 2020</span>
+                      <span class="note-badge badge-path">Pathology</span>
+                      <span class="note-badge badge-method">Segmentation</span>
+                    </div>
+                    <h4 class="note-title note-title-strong">[Paper Note] Nuclei Segmentation</h4>
+                    <div class="note-meta">Architecture · Supervision Quality · Deployment Realism</div>
+                    <p class="note-excerpt">A structured reading note on nuclei segmentation architecture, supervision quality, and deployment realism.</p>
+                  </div>
+                  <a class="note-open-btn note-open-btn-nuclei" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
+                </article>
+              </div>
+            </section>
+          </div>
         </section>
 
         <section class="page" id="page-pathology-diagnosis">
-          <section class="panel-card category-page category-page-diagnosis">
-            <div class="section-head">
-              <div>
-                <div class="section-kicker kicker-diagnosis">Subtopic</div>
-                <h3 class="section-title">Computational Pathology · Cancer Diagnosis</h3>
-                <p class="section-subtitle">Diagnosis pipelines, biomarkers, domain shift, and pathology-specific interpretability.</p>
-              </div>
-            </div>
+          <div class="page-stack">
+            <section class="overview-card overview-card-pathology-sub overview-card-diagnosis">
+              <div class="overview-topline">In This Section</div>
+              <h2 class="overview-title">Cancer Diagnosis</h2>
+              <p class="overview-text">This section tracks diagnosis-oriented pathology AI papers, with emphasis on data curation, domain shift, biomarker dependence, clinical plausibility, and the gap between benchmark performance and real-world usefulness.</p>
+            </section>
 
-            <div class="note-list">
-              <article class="note-card compact note-card-diagnosis">
-                <div class="note-main">
-                  <div class="note-badges">
-                    <span class="note-badge badge-venue">Nature Medicine 2019</span>
-                    <span class="note-badge badge-path">Diagnosis</span>
-                    <span class="note-badge badge-method">Clinical AI</span>
-                  </div>
-                  <h4 class="note-title note-title-strong">[Paper Note] Cancer Diagnosis</h4>
-                  <div class="note-meta">Task setting · Data curation · Model design · Clinical relevance</div>
-                  <p class="note-excerpt">A concise template entry for recording task setting, data curation, model design, limitations, and clinical relevance.</p>
+            <section class="panel-card category-page category-page-diagnosis">
+              <div class="section-head section-head-simple">
+                <div>
+                  <div class="section-kicker kicker-diagnosis">Subtopic</div>
+                  <h3 class="section-title">Paper List</h3>
                 </div>
-                <a class="note-open-btn note-open-btn-diagnosis" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
-              </article>
-            </div>
-          </section>
+              </div>
+
+              <div class="note-list">
+                <article class="note-card compact note-card-diagnosis">
+                  <div class="note-main">
+                    <div class="note-badges">
+                      <span class="note-badge badge-venue">Nature Medicine 2019</span>
+                      <span class="note-badge badge-path">Diagnosis</span>
+                      <span class="note-badge badge-method">Clinical AI</span>
+                    </div>
+                    <h4 class="note-title note-title-strong">[Paper Note] Cancer Diagnosis</h4>
+                    <div class="note-meta">Task Setting · Data Curation · Model Design · Clinical Relevance</div>
+                    <p class="note-excerpt">A concise template entry for recording task setting, data curation, model design, limitations, and clinical relevance.</p>
+                  </div>
+                  <a class="note-open-btn note-open-btn-diagnosis" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
+                </article>
+              </div>
+            </section>
+          </div>
         </section>
 
         <section class="page" id="page-pathology-prognosis">
-          <section class="panel-card category-page category-page-prognosis">
-            <div class="section-head">
-              <div>
-                <div class="section-kicker kicker-prognosis">Subtopic</div>
-                <h3 class="section-title">Computational Pathology · Cancer Prognosis</h3>
-                <p class="section-subtitle">Risk stratification, survival modeling, multimodal fusion, and mechanistic interpretability.</p>
-              </div>
-            </div>
+          <div class="page-stack">
+            <section class="overview-card overview-card-pathology-sub overview-card-prognosis">
+              <div class="overview-topline">In This Section</div>
+              <h2 class="overview-title">Cancer Prognosis</h2>
+              <p class="overview-text">This section focuses on prognosis and survival modeling papers, especially those involving multimodal fusion, risk stratification, endpoint definition, and interpretable modeling choices that are relevant for translational cancer research.</p>
+            </section>
 
-            <div class="note-list">
-              <article class="note-card compact note-card-prognosis">
-                <div class="note-main">
-                  <div class="note-badges">
-                    <span class="note-badge badge-venue">Nature Cancer 2022</span>
-                    <span class="note-badge badge-path">Prognosis</span>
-                    <span class="note-badge badge-method">Survival Modeling</span>
-                  </div>
-                  <h4 class="note-title note-title-strong">[Paper Note] Cancer Prognosis</h4>
-                  <div class="note-meta">Survival endpoints · Metrics · Feature fusion · Translation</div>
-                  <p class="note-excerpt">A note template for survival endpoint definition, evaluation metrics, feature fusion, and translation concerns.</p>
+            <section class="panel-card category-page category-page-prognosis">
+              <div class="section-head section-head-simple">
+                <div>
+                  <div class="section-kicker kicker-prognosis">Subtopic</div>
+                  <h3 class="section-title">Paper List</h3>
                 </div>
-                <a class="note-open-btn note-open-btn-prognosis" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
-              </article>
-            </div>
-          </section>
+              </div>
+
+              <div class="note-list">
+                <article class="note-card compact note-card-prognosis">
+                  <div class="note-main">
+                    <div class="note-badges">
+                      <span class="note-badge badge-venue">Nature Cancer 2022</span>
+                      <span class="note-badge badge-path">Prognosis</span>
+                      <span class="note-badge badge-method">Survival Modeling</span>
+                    </div>
+                    <h4 class="note-title note-title-strong">[Paper Note] Cancer Prognosis</h4>
+                    <div class="note-meta">Survival Endpoints · Metrics · Feature Fusion · Translation</div>
+                    <p class="note-excerpt">A note template for survival endpoint definition, evaluation metrics, feature fusion, and translation concerns.</p>
+                  </div>
+                  <a class="note-open-btn note-open-btn-prognosis" href="note-template.html" target="_blank" rel="noopener noreferrer">Browse</a>
+                </article>
+              </div>
+            </section>
+          </div>
         </section>
       </div>
     </main>

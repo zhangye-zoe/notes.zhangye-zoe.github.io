@@ -4131,3 +4131,174 @@ html[data-theme="dark"] #pdfSideNote {
     height: 560px;
   }
 }
+
+
+/* ===== v18 Home refinement: distinct stats, full topic suggestions, cleaner finish and compact queue ===== */
+
+/* Search statistics: make them visually different from filter chips */
+.search-panel .mini-stats {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(88px, auto));
+  gap: 9px !important;
+  align-items: stretch;
+  justify-content: end;
+}
+.search-panel .mini-stat {
+  display: grid !important;
+  place-items: center;
+  min-width: 92px;
+  min-height: 54px;
+  padding: 8px 12px !important;
+  border-radius: 18px !important;
+  border: 1px solid rgba(105, 84, 174, .18) !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.82), rgba(246,243,255,.68)),
+    radial-gradient(circle at 20% 0%, rgba(127,98,202,.12), transparent 36%) !important;
+  box-shadow: 0 10px 22px rgba(72,48,120,.055);
+  color: var(--text) !important;
+  font-size: 0 !important;
+}
+.search-panel .mini-stat strong {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 850;
+  color: #6f52b8;
+  letter-spacing: -0.02em;
+}
+.search-panel .mini-stat em {
+  display: block;
+  margin-top: 5px;
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 8.6px;
+  line-height: 1;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+html[data-theme="dark"] .search-panel .mini-stat {
+  background: linear-gradient(180deg, rgba(41,35,59,.72), rgba(27,30,42,.72)) !important;
+  border-color: rgba(216,205,255,.16) !important;
+}
+html[data-theme="dark"] .search-panel .mini-stat strong { color: #d8cdff; }
+
+/* Suggested starting points: smaller, colorful, all-topic friendly */
+.suggestion-head {
+  font-size: 8.8px !important;
+  letter-spacing: .16em !important;
+}
+.suggestion-pills {
+  gap: 7px !important;
+}
+.suggestion-chip {
+  padding: 5.2px 8.2px !important;
+  border-radius: 999px !important;
+  font-size: 9.7px !important;
+  line-height: 1 !important;
+  font-weight: 820 !important;
+  letter-spacing: -0.01em !important;
+  box-shadow: none !important;
+}
+.suggestion-chip.chip-1 { color: #6f52b8 !important; background: rgba(127,98,202,.075) !important; border-color: rgba(127,98,202,.22) !important; }
+.suggestion-chip.chip-2 { color: #2f6fa5 !important; background: rgba(55,126,184,.075) !important; border-color: rgba(55,126,184,.22) !important; }
+.suggestion-chip.chip-3 { color: #2d7f74 !important; background: rgba(64,143,132,.075) !important; border-color: rgba(64,143,132,.22) !important; }
+.suggestion-chip.chip-4 { color: #a46a47 !important; background: rgba(183,118,94,.085) !important; border-color: rgba(183,118,94,.22) !important; }
+.suggestion-chip.chip-5 { color: #9a5ca8 !important; background: rgba(154,92,168,.075) !important; border-color: rgba(154,92,168,.22) !important; }
+.suggestion-chip.chip-6 { color: #2782a3 !important; background: rgba(39,130,163,.075) !important; border-color: rgba(39,130,163,.22) !important; }
+.suggestion-chip.chip-7 { color: #b05780 !important; background: rgba(176,87,128,.075) !important; border-color: rgba(176,87,128,.22) !important; }
+.suggestion-chip.chip-8 { color: #73853b !important; background: rgba(115,133,59,.08) !important; border-color: rgba(115,133,59,.22) !important; }
+.suggestion-chip.chip-9 { color: #4f67b8 !important; background: rgba(79,103,184,.075) !important; border-color: rgba(79,103,184,.22) !important; }
+.suggestion-chip.chip-10 { color: #b37a2d !important; background: rgba(179,122,45,.08) !important; border-color: rgba(179,122,45,.22) !important; }
+.suggestion-chip.chip-11 { color: #67732d !important; background: rgba(103,115,45,.08) !important; border-color: rgba(103,115,45,.22) !important; }
+.suggestion-chip.chip-12 { color: #8f5cc4 !important; background: rgba(143,92,196,.075) !important; border-color: rgba(143,92,196,.22) !important; }
+.suggestion-chip:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(72,48,120,.08) !important;
+}
+html[data-theme="dark"] .suggestion-chip {
+  background: rgba(255,255,255,.055) !important;
+  border-color: rgba(216,205,255,.16) !important;
+  color: #d8cdff !important;
+}
+
+/* Finish notes: remove descriptive line visually and diversify tags */
+.finish-body > span {
+  display: none !important;
+}
+.finish-tags small {
+  font-family: var(--font-ui);
+  letter-spacing: -0.01em;
+}
+.finish-tag-1 {
+  color: #6f52b8 !important;
+  background: rgba(127,98,202,.075) !important;
+  border-color: rgba(127,98,202,.18) !important;
+}
+.finish-tag-2 {
+  color: #3f8379 !important;
+  background: rgba(63,131,121,.08) !important;
+  border-color: rgba(63,131,121,.18) !important;
+}
+.finish-tag-3 {
+  color: #a86954 !important;
+  background: rgba(168,105,84,.08) !important;
+  border-color: rgba(168,105,84,.18) !important;
+}
+.finish-tag-4 {
+  color: #3867b9 !important;
+  background: rgba(56,103,185,.075) !important;
+  border-color: rgba(56,103,185,.18) !important;
+}
+.finish-tag-5 {
+  color: #ad4f7d !important;
+  background: rgba(173,79,125,.075) !important;
+  border-color: rgba(173,79,125,.18) !important;
+}
+.finish-tag-6 {
+  color: #72813c !important;
+  background: rgba(114,129,60,.08) !important;
+  border-color: rgba(114,129,60,.18) !important;
+}
+
+/* Reading Queue: compact title, cleaner border, different from finished notes */
+.queue-card {
+  border-style: solid !important;
+  border-width: 1px !important;
+  border-left-width: 3px !important;
+  padding: 12px 15px !important;
+  border-radius: 18px !important;
+}
+.queue-card .queue-main h3,
+#readingQueue .queue-card .queue-main h3,
+.home-paper-list.queue-list .queue-card .queue-main h3 {
+  font-family: var(--font-ui) !important;
+  font-size: 14.2px !important;
+  line-height: 1.27 !important;
+  letter-spacing: -0.018em !important;
+  font-weight: 820 !important;
+  margin: 4px 0 3px !important;
+  max-width: 820px;
+}
+.queue-card .queue-main p {
+  font-size: 11.4px !important;
+}
+.queue-card .queue-meta > span,
+.queue-card .queue-tag {
+  font-size: 8.8px !important;
+  padding: 3px 6px !important;
+}
+.queue-card .paper-open {
+  height: 32px !important;
+  min-width: 62px !important;
+  font-size: 11px !important;
+}
+@media (max-width: 980px) {
+  .search-panel .mini-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: stretch;
+    width: 100%;
+  }
+}

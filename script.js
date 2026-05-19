@@ -1716,16 +1716,15 @@ const searchInput = document.getElementById('globalSearch');
 const searchResults = document.getElementById('searchResults');
 const searchSuggestions = document.getElementById('searchSuggestions');
 const suggestedSearches = [
-  'Pathology foundation models',
-  'GraphVelo',
-  'MultiVeloVAE',
-  'Agentic pathology',
-  'Spatial transcriptomics',
-  'OmiCLIP',
-  'CONCH',
-  'TITAN',
-  'Perturbation prediction',
-  'Regulatory networks'
+  ...new Set([
+    ...topicKeys.map((key) => topics[key].title),
+    'PORPOISE',
+    'OmiCLIP',
+    'CONCH',
+    'TITAN',
+    'GraphVelo',
+    'MultiVeloVAE'
+  ])
 ];
 let activeFamily = 'All';
 
@@ -1735,7 +1734,7 @@ function renderSearchSuggestions() {
   searchSuggestions.innerHTML = `
     <div class="suggestion-head">Suggested starting points</div>
     <div class="suggestion-pills">
-      ${suggestedSearches.map((item, index) => `<button type="button" class="suggestion-chip chip-${(index % 8) + 1}" data-suggest="${escapeHTML(item)}">${escapeHTML(item)}</button>`).join('')}
+      ${suggestedSearches.map((item, index) => `<button type="button" class="suggestion-chip chip-${(index % 12) + 1}" data-suggest="${escapeHTML(item)}">${escapeHTML(item)}</button>`).join('')}
     </div>
   `;
 }
@@ -1906,8 +1905,7 @@ function renderFinishNotes() {
       <div class="finish-body">
         <strong>${escapeHTML(item.title)}</strong>
         <em>${escapeHTML(item.venue)}</em>
-        <span>${escapeHTML(item.desc)}</span>
-        <div class="finish-tags">${item.tags.map((tag) => `<small>${escapeHTML(tag)}</small>`).join('')}</div>
+        <div class="finish-tags">${item.tags.map((tag, index) => `<small class="finish-tag finish-tag-${(index % 6) + 1}">${escapeHTML(tag)}</small>`).join('')}</div>
       </div>
       <span class="finish-open">Open</span>
     </a>
@@ -1934,7 +1932,12 @@ function renderMiniStats() {
     ['Papers', allPapers.length],
     ['Nature Portfolio', natureCount],
     ['Topics', topicKeys.length]
-  ].map(([name, value]) => `<span class="mini-stat">${name} · ${value}</span>`).join('');
+  ].map(([name, value]) => `
+    <span class="mini-stat">
+      <strong>${value}</strong>
+      <em>${name}</em>
+    </span>
+  `).join('');
 }
 renderMiniStats();
 
